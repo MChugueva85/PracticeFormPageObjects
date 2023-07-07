@@ -1,6 +1,6 @@
-package HomeTaskPageObject.pages;
+package home_task_page_object.pages;
 
-import HomeTaskPageObject.pages.components.CalendarComponent;
+import home_task_page_object.pages.components.CalendarComponent;
 import com.codeborne.selenide.SelenideElement;
 
 import java.io.File;
@@ -32,6 +32,11 @@ public class RegistrationPageTests {
 
     public RegistrationPageTests openPage() {
         open("/automation-practice-form");
+
+        return this;
+    }
+
+    public RegistrationPageTests removeFixedbanFooter() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
@@ -111,7 +116,7 @@ public class RegistrationPageTests {
         return this;
     }
 
-    public void Submit() {
+    public void submit() {
         submit.click();
 
     }

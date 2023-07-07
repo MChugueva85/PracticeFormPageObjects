@@ -1,4 +1,4 @@
-package HomeTaskPageObject.pages.components;
+package home_task_page_object.pages.components;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -8,9 +8,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ResultPageComponent {
     SelenideElement
-            ResultTable = $(".table-responsive");
+            resultTable = $(".table-responsive");
 
-    public void CheckOut (String caption, String value) {
-        ResultTable.$(byText(caption)).sibling(0).shouldHave(Condition.text(value));
+    public void checkOut (String caption, String value) {
+        resultTable.$(byText(caption)).sibling(0).shouldHave(Condition.text(value));
     }
 }

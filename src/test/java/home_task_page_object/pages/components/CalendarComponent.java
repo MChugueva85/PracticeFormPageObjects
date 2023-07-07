@@ -1,4 +1,4 @@
-package HomeTaskPageObject.pages.components;
+package home_task_page_object.pages.components;
 
 import static com.codeborne.selenide.Selenide.$;
 
