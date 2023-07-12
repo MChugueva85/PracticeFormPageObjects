@@ -22,7 +22,7 @@ public class RegistrationFormTests extends TestBase {
                 .setUserNumber("1233210023")
                 .setBirthDay("11", "July", "1982")
                 .setSubjects("Maths")
-                .setHobbies()
+                .setHobbies("Sport")
                 .setPicture(new File("src/test/resources/Picture.png"))
                 .setAddress("Адрес")
                 .setState("NCR")

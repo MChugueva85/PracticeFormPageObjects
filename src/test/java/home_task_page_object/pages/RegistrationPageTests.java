@@ -21,7 +21,6 @@ public class RegistrationPageTests {
             userNumberInput = $("#userNumber"),
             birthDayInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
-            HobbiesInput = $(byText("Sports")),
             PictureInput = $(by("type", "file")),
             AddressInput = $("#currentAddress"),
             stateInput = $("#state"),
@@ -86,8 +85,8 @@ public class RegistrationPageTests {
         return this;
     }
 
-    public RegistrationPageTests setHobbies() {
-        HobbiesInput.click();
+    public RegistrationPageTests setHobbies(String value) {
+       $(byText(value)).click();
 
         return this;
     }
