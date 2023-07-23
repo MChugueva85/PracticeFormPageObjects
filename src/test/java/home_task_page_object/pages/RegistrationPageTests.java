@@ -21,8 +21,8 @@ public class RegistrationPageTests {
             userNumberInput = $("#userNumber"),
             birthDayInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
-            PictureInput = $(by("type", "file")),
-            AddressInput = $("#currentAddress"),
+            pictureInput = $(by("type", "file")),
+            addressInput = $("#currentAddress"),
             stateInput = $("#state"),
             stateList = $("#stateCity-wrapper"),
             cityInput = $("#city"),
@@ -92,13 +92,13 @@ public class RegistrationPageTests {
     }
 
     public RegistrationPageTests setPicture(File file) {
-        PictureInput.uploadFile(file);
+        pictureInput.uploadFile(file);
 
         return this;
     }
 
     public RegistrationPageTests setAddress(String value) {
-        AddressInput.setValue(value);
+        addressInput.setValue(value);
 
         return this;
     }
