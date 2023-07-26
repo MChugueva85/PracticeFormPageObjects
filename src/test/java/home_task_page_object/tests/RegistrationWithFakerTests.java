@@ -10,21 +10,21 @@ import java.io.File;
 
 public class RegistrationWithFakerTests extends TestBase {
 
-    RegistrationPageTests RegistrationPageTests = new RegistrationPageTests();
+    RegistrationPageTests registrationPageTests = new RegistrationPageTests();
     ResultPageComponent resultPageComponent = new ResultPageComponent();
     RandomData randomData = new RandomData();
     @Test
     void successfulRegistrationTest() {
 
 
-        RegistrationPageTests.openPage()
+        registrationPageTests.openPage()
                 .removeFixedbanFooter()
                 .setFirstName(randomData.firstName)
                 .setLastName(randomData.lastName)
                 .setUserEmail(randomData.userEmail)
                 .setGender(randomData.gender)
-                .setUserNumber(randomData.UserNumber)
-                .setBirthDay(randomData.Day, randomData.Month, randomData.Year)
+                .setUserNumber(randomData.userNumber)
+                .setBirthDay(randomData.day, randomData.month, randomData.year)
                 .setSubjects(randomData.subjects)
                 .setHobbies(randomData.hobbies)
                 .setPicture(new File("src/test/resources/Picture.png"))
@@ -37,8 +37,8 @@ public class RegistrationWithFakerTests extends TestBase {
         resultPageComponent.checkOut("Student Name", randomData.firstName + " " + randomData.lastName);
         resultPageComponent.checkOut("Student Email", randomData.userEmail);
         resultPageComponent.checkOut("Gender", randomData.gender);
-        resultPageComponent.checkOut("Mobile", randomData.UserNumber);
-        resultPageComponent.checkOut("Date of Birth", randomData.Day + " " + randomData.Month + "," + randomData.Year);
+        resultPageComponent.checkOut("Mobile", randomData.userNumber);
+        resultPageComponent.checkOut("Date of Birth", randomData.day + " " + randomData.month + "," + randomData.year);
         resultPageComponent.checkOut("Subjects", randomData.subjects);
         resultPageComponent.checkOut("Hobbies", randomData.hobbies);
         resultPageComponent.checkOut("Picture", "Picture.png");
