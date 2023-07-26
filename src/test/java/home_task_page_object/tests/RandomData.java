@@ -15,6 +15,7 @@ public class RandomData {
         month = randomUtils.getMonthOfBirth(),
         subjects = randomUtils.getSubjects(),
         hobbies = randomUtils.getHobbies(),
+        userPic = "Picture.png",
         address = randomUtils.getAddress(),
         state = randomUtils.getState(),
         city = randomUtils.getCity(state),

@@ -4,10 +4,6 @@ import home_task_page_object.pages.RegistrationPageTests;
 import home_task_page_object.pages.components.ResultPageComponent;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-
-
-
 public class RegistrationWithFakerTests extends TestBase {
 
     RegistrationPageTests registrationPageTests = new RegistrationPageTests();
@@ -27,7 +23,7 @@ public class RegistrationWithFakerTests extends TestBase {
                 .setBirthDay(randomData.day, randomData.month, randomData.year)
                 .setSubjects(randomData.subjects)
                 .setHobbies(randomData.hobbies)
-                .setPicture(new File("src/test/resources/Picture.png"))
+                .setPicture(randomData.userPic)
                 .setAddress(randomData.address)
                 .setState(randomData.state)
                 .setCity(randomData.city)
@@ -41,7 +37,7 @@ public class RegistrationWithFakerTests extends TestBase {
         resultPageComponent.checkOut("Date of Birth", randomData.day + " " + randomData.month + "," + randomData.year);
         resultPageComponent.checkOut("Subjects", randomData.subjects);
         resultPageComponent.checkOut("Hobbies", randomData.hobbies);
-        resultPageComponent.checkOut("Picture", "Picture.png");
+        resultPageComponent.checkOut("Picture", randomData.userPic);
         resultPageComponent.checkOut("Address", randomData.address);
         resultPageComponent.checkOut("State and City", randomData.state + " " + randomData.city);
 

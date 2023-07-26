@@ -3,8 +3,6 @@ package home_task_page_object.pages;
 import home_task_page_object.pages.components.CalendarComponent;
 import com.codeborne.selenide.SelenideElement;
 
-import java.io.File;
-
 import static com.codeborne.selenide.Selectors.by;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -91,9 +89,8 @@ public class RegistrationPageTests {
         return this;
     }
 
-    public RegistrationPageTests setPicture(File file) {
-        pictureInput.uploadFile(file);
-
+    public RegistrationPageTests setPicture(String value) {
+        pictureInput.uploadFromClasspath(value);
         return this;
     }
 
