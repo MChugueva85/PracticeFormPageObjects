@@ -12,7 +12,6 @@ public class RegistrationWithFakerTests extends TestBase {
     @Test
     void successfulRegistrationTest() {
 
-
         registrationPageTests.openPage()
                 .removeFixedbanFooter()
                 .setFirstName(randomData.firstName)
