@@ -40,7 +40,7 @@ public class RegistrationWithFakerRemoteTests extends TestBaseRemote {
         resultPageComponent.checkOut("Student Email", randomData.userEmail);
         resultPageComponent.checkOut("Gender", randomData.gender);
         resultPageComponent.checkOut("Mobile", randomData.userNumber);
-        resultPageComponent.checkOut("Dat@e of Birth", randomData.day + " " + randomData.month + "," + randomData.year);
+        resultPageComponent.checkOut("Date of Birth", randomData.day + " " + randomData.month + "," + randomData.year);
         resultPageComponent.checkOut("Subjects", randomData.subjects);
         resultPageComponent.checkOut("Hobbies", randomData.hobbies);
         resultPageComponent.checkOut("Picture", randomData.userPic);
