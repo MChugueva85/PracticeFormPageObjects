@@ -84,8 +84,8 @@ public class RandomUtils {
         String[] Haryana = {"Karnal", "Panipat"};
         String[] Rajasthan = {"Jaipur", "Jaiselmer"};
         return switch (state) {
-            case "NCR" -> faker.options().option(NCR);
-            case "Uttar Pradesh" -> faker.options().option(UttarPradesh);
+            case "NCR"-> faker.options().option(NCR);
+            case "Uttar Pradesh"-> faker.options().option(UttarPradesh);
             case "Haryana" -> faker.options().option(Haryana);
             case "Rajasthan" -> faker.options().option(Rajasthan);
             default -> throw new IllegalStateException("Unexpected value: " + state);
