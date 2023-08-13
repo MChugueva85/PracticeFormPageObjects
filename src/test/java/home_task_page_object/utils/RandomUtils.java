@@ -2,6 +2,8 @@ package home_task_page_object.utils;
 
 import com.github.javafaker.Faker;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 public class RandomUtils {
@@ -79,16 +81,25 @@ public class RandomUtils {
 
 
     public String getCity(String state) {
-        String[] NCR = {"Delhi", "Gurgaon", "Noida"};
-        String[] UttarPradesh = {"Agra", "Lucknow", "Merrut"};
-        String[] Haryana = {"Karnal", "Panipat"};
-        String[] Rajasthan = {"Jaipur", "Jaiselmer"};
-        return switch (state) {
-            case "NCR"-> faker.options().option(NCR);
-            case "Uttar Pradesh"-> faker.options().option(UttarPradesh);
-            case "Haryana" -> faker.options().option(Haryana);
-            case "Rajasthan" -> faker.options().option(Rajasthan);
-            default -> throw new IllegalStateException("Unexpected value: " + state);
-        };
+        String city = null;
+        List<String> citiesNCR = Arrays.asList("Delhi", "Gurgaon", "Noida");
+        List<String> citiesUttarPradesh = Arrays.asList("Agra", "Lucknow", "Merrut");
+        List<String> citiesHaryana = Arrays.asList("Karnal", "Panipat");
+        List<String> citiesRajasthan = Arrays.asList("Jaipur", "Jaiselmer");
+
+        switch (state) {
+            case "NCR":
+                city = citiesNCR.get(faker.random().nextInt(0, citiesNCR.size() - 1));
+                break;
+            case "Uttar Pradesh":
+                city = citiesUttarPradesh.get(faker.random().nextInt(0, citiesUttarPradesh.size() - 1));
+                break;
+            case "Haryana":
+                city = citiesHaryana.get(faker.random().nextInt(0, citiesHaryana.size() - 1));
+                break;
+            case "Rajasthan" :
+                city = citiesRajasthan.get(faker.random().nextInt(0, citiesRajasthan.size() - 1));
+        }
+        return city;
     }
 }
