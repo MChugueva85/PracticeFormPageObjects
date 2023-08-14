@@ -14,11 +14,13 @@ public class TestBaseRemote {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = System.getProperty("BASE_URL","https://demoqa.com");
+        Configuration.browserSize = System.getProperty("browserSize","1920x1080");
         Configuration.pageLoadStrategy = "eager";
 
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = System.getProperty("remoteDriverUrl");
+        Configuration.browser = System.getProperty("browser", "opera");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.of(
