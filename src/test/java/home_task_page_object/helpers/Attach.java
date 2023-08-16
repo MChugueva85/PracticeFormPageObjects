@@ -1,4 +1,4 @@
-package home_task_page_object.pages.helpers;
+package home_task_page_object.helpers;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;

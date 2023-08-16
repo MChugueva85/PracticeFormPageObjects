@@ -1,7 +1,7 @@
 package home_task_page_object.tests;
 
 import com.codeborne.selenide.Configuration;
-import home_task_page_object.pages.helpers.Attach;
+import home_task_page_object.helpers.Attach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
